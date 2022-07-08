@@ -156,7 +156,7 @@
                         />
                       </div>
                       <div class="d-grid gap-2 mt-3">
-                        <button onclick=(saveClipboard(event)) type="button" class="btn btn-info" >Save</button>
+                        <button onclick=(saveClipboard(event)) type="submit" class="btn btn-info" >Save</button>
                       </div>
                     </form>
                   </div>
@@ -174,13 +174,8 @@
   function saveClipboard() {
     /* Get the text field */
     var copyText = document.getElementById("review");
-  
-    /* Select the text field */
-    copyText.select();
-    copyText.setSelectionRange(0, 99999); /* For mobile devices */
-  
-    /* Copy the text inside the text field */
-    navigator.clipboard.writeText(copyText.value);    
+    copyText.select()
+    navigator.clipboard.writeText(copyText.value)
   }
 
 </script>
