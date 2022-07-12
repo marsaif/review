@@ -22,7 +22,7 @@ for review in reviews:
     scraper.courtesy = review['courtesy']
     scraper.tidiness = review['tidiness']
 
-    #scraper.add_review_checkatrade()
+    scraper.add_review_checkatrade()
     scraper.add_review_yell()
     requests.get(f"https://marseif2.pythonanywhere.com/delete/{review['id']}")
 

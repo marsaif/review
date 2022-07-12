@@ -19,6 +19,11 @@
     <title>Add Review</title>
 
     <style>
+      .bord {
+        border: 5px solid rgb(114, 137, 186);
+        border-radius: 25px;
+
+      }
       .btn-scale {
   min-width: 44px;
   width: 6%;
@@ -258,67 +263,67 @@
                             <div class="col-xs-12">          
                               <h5 class="font-weight-bold mt-3">Quality of workmanship </h5>
                               <div class="chart-scale">
-                                <button onclick='setQuality(event,1)' type="button" class="btn btn-scale btn-scale-desc-1">1</button>
-                                <button onclick='setQuality(event,2)' type="button" class="btn btn-scale btn-scale-desc-2">2</button>
-                                <button onclick='setQuality(event,3)' type="button" class="btn btn-scale btn-scale-desc-3">3</button>
-                                <button onclick='setQuality(event,4)' type="button" class="btn btn-scale btn-scale-desc-4">4</button>
-                                <button onclick='setQuality(event,5)' type="button" class="btn btn-scale btn-scale-desc-5">5</button>
-                                <button onclick='setQuality(event,6)' type="button" class="btn btn-scale btn-scale-desc-6">6</button>
-                                <button onclick='setQuality(event,7)' type="button" class="btn btn-scale btn-scale-desc-7">7</button>
-                                <button onclick='setQuality(event,8)' type="button" class="btn btn-scale btn-scale-desc-8">8</button>
-                                <button onclick='setQuality(event,9)' type="button" class="btn btn-scale btn-scale-desc-9">9</button>
-                                <button onclick='setQuality(event,10)' type="button" class="btn btn-scale btn-scale-desc-10">10</button>
+                                <button onclick='setQuality(event,1)' type="button" class="btn btn-scale btn-scale-desc-1 quantity">1</button>
+                                <button onclick='setQuality(event,2)' type="button" class="btn btn-scale btn-scale-desc-2 quantity">2</button>
+                                <button onclick='setQuality(event,3)' type="button" class="btn btn-scale btn-scale-desc-3 quantity">3</button>
+                                <button onclick='setQuality(event,4)' type="button" class="btn btn-scale btn-scale-desc-4 quantity">4</button>
+                                <button onclick='setQuality(event,5)' type="button" class="btn btn-scale btn-scale-desc-5 quantity">5</button>
+                                <button onclick='setQuality(event,6)' type="button" class="btn btn-scale btn-scale-desc-6 quantity">6</button>
+                                <button onclick='setQuality(event,7)' type="button" class="btn btn-scale btn-scale-desc-7 quantity">7</button>
+                                <button onclick='setQuality(event,8)' type="button" class="btn btn-scale btn-scale-desc-8 quantity">8</button>
+                                <button onclick='setQuality(event,9)' type="button" class="btn btn-scale btn-scale-desc-9 quantity">9</button>
+                                <button onclick='setQuality(event,10)' type="button" class="btn btn-scale btn-scale-desc-10 quantity">10</button>
                               </div>
 
                               <h5 class="font-weight-bold mt-3">Tidiness </h5>
                               <div class="chart-scale">
-                                <button onclick='setTidiness(event,1)' type="button" class="btn btn-scale btn-scale-desc-1">1</button>
-                                <button onclick='setTidiness(event,2)' type="button" class="btn btn-scale btn-scale-desc-2">2</button>
-                                <button onclick='setTidiness(event,3)' type="button" class="btn btn-scale btn-scale-desc-3">3</button>
-                                <button onclick='setTidiness(event,4)' type="button" class="btn btn-scale btn-scale-desc-4">4</button>
-                                <button onclick='setTidiness(event,5)' type="button" class="btn btn-scale btn-scale-desc-5">5</button>
-                                <button onclick='setTidiness(event,6)' type="button" class="btn btn-scale btn-scale-desc-6">6</button>
-                                <button onclick='setTidiness(event,7)' type="button" class="btn btn-scale btn-scale-desc-7">7</button>
-                                <button onclick='setTidiness(event,8)' type="button" class="btn btn-scale btn-scale-desc-8">8</button>
-                                <button onclick='setTidiness(event,9)' type="button" class="btn btn-scale btn-scale-desc-9">9</button>
-                                <button onclick='setTidiness(event,10)' type="button" class="btn btn-scale btn-scale-desc-10">10</button>
+                                <button onclick='setTidiness(event,1)' type="button" class="btn btn-scale btn-scale-desc-1 tidiness">1</button>
+                                <button onclick='setTidiness(event,2)' type="button" class="btn btn-scale btn-scale-desc-2 tidiness">2</button>
+                                <button onclick='setTidiness(event,3)' type="button" class="btn btn-scale btn-scale-desc-3 tidiness ">3</button>
+                                <button onclick='setTidiness(event,4)' type="button" class="btn btn-scale btn-scale-desc-4 tidiness">4</button>
+                                <button onclick='setTidiness(event,5)' type="button" class="btn btn-scale btn-scale-desc-5 tidiness">5</button>
+                                <button onclick='setTidiness(event,6)' type="button" class="btn btn-scale btn-scale-desc-6 tidiness">6</button>
+                                <button onclick='setTidiness(event,7)' type="button" class="btn btn-scale btn-scale-desc-7 tidiness">7</button>
+                                <button onclick='setTidiness(event,8)' type="button" class="btn btn-scale btn-scale-desc-8 tidiness">8</button>
+                                <button onclick='setTidiness(event,9)' type="button" class="btn btn-scale btn-scale-desc-9 tidiness">9</button>
+                                <button onclick='setTidiness(event,10)' type="button" class="btn btn-scale btn-scale-desc-10 tidiness">10</button>
                               </div>
 
                               <h5 class="font-weight-bold mt-3">Reliability & timekeeping </h5>
                               <div class="chart-scale">
-                                <button onclick='setReliability(event,1)' type="button" class="btn btn-scale btn-scale-desc-1">1</button>
-                                <button onclick='setReliability(event,2)' type="button" class="btn btn-scale btn-scale-desc-2">2</button>
-                                <button onclick='setReliability(event,3)' type="button" class="btn btn-scale btn-scale-desc-3">3</button>
-                                <button onclick='setReliability(event,4)' type="button" class="btn btn-scale btn-scale-desc-4">4</button>
-                                <button onclick='setReliability(event,5)' type="button" class="btn btn-scale btn-scale-desc-5">5</button>
-                                <button onclick='setReliability(event,6)' type="button" class="btn btn-scale btn-scale-desc-6">6</button>
-                                <button onclick='setReliability(event,7)' type="button" class="btn btn-scale btn-scale-desc-7">7</button>
-                                <button onclick='setReliability(event,8)' type="button" class="btn btn-scale btn-scale-desc-8">8</button>
-                                <button onclick='setReliability(event,9)' type="button" class="btn btn-scale btn-scale-desc-9">9</button>
-                                <button onclick='setReliability(event,10)' type="button" class="btn btn-scale btn-scale-desc-10">10</button>
+                                <button onclick='setReliability(event,1)' type="button" class="btn btn-scale btn-scale-desc-1 reliability">1</button>
+                                <button onclick='setReliability(event,2)' type="button" class="btn btn-scale btn-scale-desc-2 reliability">2</button>
+                                <button onclick='setReliability(event,3)' type="button" class="btn btn-scale btn-scale-desc-3 reliability">3</button>
+                                <button onclick='setReliability(event,4)' type="button" class="btn btn-scale btn-scale-desc-4 reliability">4</button>
+                                <button onclick='setReliability(event,5)' type="button" class="btn btn-scale btn-scale-desc-5 reliability">5</button>
+                                <button onclick='setReliability(event,6)' type="button" class="btn btn-scale btn-scale-desc-6 reliability">6</button>
+                                <button onclick='setReliability(event,7)' type="button" class="btn btn-scale btn-scale-desc-7 reliability">7</button>
+                                <button onclick='setReliability(event,8)' type="button" class="btn btn-scale btn-scale-desc-8 reliability">8</button>
+                                <button onclick='setReliability(event,9)' type="button" class="btn btn-scale btn-scale-desc-9 reliability">9</button>
+                                <button onclick='setReliability(event,10)' type="button" class="btn btn-scale btn-scale-desc-10 reliability">10</button>
                               </div>
 
                               <h5 class="font-weight-bold mt-3">Courtesy </h5>
                               <div class="chart-scale">
-                                <button onclick='setCourtesy(event,1)' type="button" class="btn btn-scale btn-scale-desc-1">1</button>
-                                <button onclick='setCourtesy(event,2)' type="button" class="btn btn-scale btn-scale-desc-2">2</button>
-                                <button onclick='setCourtesy(event,3)' type="button" class="btn btn-scale btn-scale-desc-3">3</button>
-                                <button onclick='setCourtesy(event,4)' type="button" class="btn btn-scale btn-scale-desc-4">4</button>
-                                <button onclick='setCourtesy(event,5)' type="button" class="btn btn-scale btn-scale-desc-5">5</button>
-                                <button onclick='setCourtesy(event,6)' type="button" class="btn btn-scale btn-scale-desc-6">6</button>
-                                <button onclick='setCourtesy(event,7)' type="button" class="btn btn-scale btn-scale-desc-7">7</button>
-                                <button onclick='setCourtesy(event,8)' type="button" class="btn btn-scale btn-scale-desc-8">8</button>
-                                <button onclick='setCourtesy(event,9)' type="button" class="btn btn-scale btn-scale-desc-9">9</button>
-                                <button onclick='setCourtesy(event,10)' type="button" class="btn btn-scale btn-scale-desc-10">10</button>
+                                <button onclick='setCourtesy(event,1)' type="button" class="btn btn-scale btn-scale-desc-1 courtesy">1</button>
+                                <button onclick='setCourtesy(event,2)' type="button" class="btn btn-scale btn-scale-desc-2 courtesy">2</button>
+                                <button onclick='setCourtesy(event,3)' type="button" class="btn btn-scale btn-scale-desc-3 courtesy">3</button>
+                                <button onclick='setCourtesy(event,4)' type="button" class="btn btn-scale btn-scale-desc-4 courtesy">4</button>
+                                <button onclick='setCourtesy(event,5)' type="button" class="btn btn-scale btn-scale-desc-5 courtesy">5</button>
+                                <button onclick='setCourtesy(event,6)' type="button" class="btn btn-scale btn-scale-desc-6 courtesy">6</button>
+                                <button onclick='setCourtesy(event,7)' type="button" class="btn btn-scale btn-scale-desc-7 courtesy">7</button>
+                                <button onclick='setCourtesy(event,8)' type="button" class="btn btn-scale btn-scale-desc-8 courtesy">8</button>
+                                <button onclick='setCourtesy(event,9)' type="button" class="btn btn-scale btn-scale-desc-9 courtesy">9</button>
+                                <button onclick='setCourtesy(event,10)' type="button" class="btn btn-scale btn-scale-desc-10 courtesy">10</button>
                               </div>
 
                               <h5 class="font-weight-bold mt-3">How would you rate this business? </h5>
                               <div class="chart-scale">
-                                <button onclick='setBusiness(event,1)' type="button" class="btn btn-scale btn-scale-desc-1">1</button>
-                                <button onclick='setBusiness(event,2)' type="button" class="btn btn-scale btn-scale-desc-3">2</button>
-                                <button onclick='setBusiness(event,3)' type="button" class="btn btn-scale btn-scale-desc-5">3</button>
-                                <button onclick='setBusiness(event,4)' type="button" class="btn btn-scale btn-scale-desc-8">4</button>
-                                <button onclick='setBusiness(event,5)' type="button" class="btn btn-scale btn-scale-desc-10">5</button>
+                                <button onclick='setBusiness(event,1)' type="button" class="btn btn-scale btn-scale-desc-1 business">1</button>
+                                <button onclick='setBusiness(event,2)' type="button" class="btn btn-scale btn-scale-desc-3 business">2</button>
+                                <button onclick='setBusiness(event,3)' type="button" class="btn btn-scale btn-scale-desc-5 business">3</button>
+                                <button onclick='setBusiness(event,4)' type="button" class="btn btn-scale btn-scale-desc-8 business">4</button>
+                                <button onclick='setBusiness(event,5)' type="button" class="btn btn-scale btn-scale-desc-10 business">5</button>
                               </div>
 
                             </div>
@@ -343,22 +348,52 @@
 
   function setQuality(e,nbr) {
     document.getElementsByName("quality")[0].value = nbr
+    let qs = document.getElementsByClassName("quantity")
+    for (let i = 0; i < qs.length; i++) {
+      qs[i].classList.remove("bord")
+    }
+
+    e.target.classList.add("bord")
   }
 
   function setTidiness(e,nbr) {
     document.getElementsByName("tidiness")[0].value = nbr
+    let qs = document.getElementsByClassName("tidiness")
+    for (let i = 0; i < qs.length; i++) {
+      qs[i].classList.remove("bord")
+    }
+
+    e.target.classList.add("bord")
   }
 
   function setReliability(e,nbr) {
     document.getElementsByName("reliability")[0].value = nbr
+    let qs = document.getElementsByClassName("reliability")
+    for (let i = 0; i < qs.length; i++) {
+      qs[i].classList.remove("bord")
+    }
+
+    e.target.classList.add("bord")
   }
 
   function setCourtesy(e,nbr) {
     document.getElementsByName("courtesy")[0].value = nbr
+    let qs = document.getElementsByClassName("courtesy")
+    for (let i = 0; i < qs.length; i++) {
+      qs[i].classList.remove("bord")
+    }
+
+    e.target.classList.add("bord")
   }
 
   function setBusiness(e,nbr) {
     document.getElementsByName("business")[0].value = nbr
+    let qs = document.getElementsByClassName("business")
+    for (let i = 0; i < qs.length; i++) {
+      qs[i].classList.remove("bord")
+    }
+
+    e.target.classList.add("bord")
   }
 
   function saveClipboard() {

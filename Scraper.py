@@ -34,7 +34,8 @@ class Scraper :
 
         stars = self.driver.find_element(By.CSS_SELECTOR,f"label[for='rating-input-1-{self.business}']")
         stars.click()
-        sleep(100)
+
+        sleep(1)
 
         input_review = self.driver.find_element(By.ID,"review_body")
         input_review.send_keys(self.review)
@@ -91,10 +92,59 @@ class Scraper :
         sleep(1)
 
         divs_rating = self.wait.until(EC.visibility_of_all_elements_located((By.CLASS_NAME,"fpntma")))
-        for div in divs_rating :
-            button = div.find_elements(By.TAG_NAME,"button")[1]
-            for i in range(3):
-                button.click()
+
+        quality = int(self.quality)
+
+        if quality != 7 :
+            if quality < 7 :
+                clicks = 7 - quality
+                button = divs_rating[0].find_elements(By.TAG_NAME,"button")[0]
+                for i in range(clicks):
+                    button.click()
+            else:
+                clicks = quality - 7 
+                button = divs_rating[0].find_elements(By.TAG_NAME,"button")[1]
+                for i in range(clicks):
+                    button.click()
+        
+        tidiness = int(self.tidiness)
+        if tidiness != 7 :
+            if tidiness < 7 :
+                clicks = 7 - tidiness
+                button = divs_rating[1].find_elements(By.TAG_NAME,"button")[0]
+                for i in range(clicks):
+                    button.click()
+            else:
+                clicks = tidiness - 7 
+                button = divs_rating[1].find_elements(By.TAG_NAME,"button")[1]
+                for i in range(clicks):
+                    button.click()
+
+        reliability = int(self.reliability)
+        if reliability != 7 :
+            if reliability < 7 :
+                clicks = 7 - reliability
+                button = divs_rating[2].find_elements(By.TAG_NAME,"button")[0]
+                for i in range(clicks):
+                    button.click()
+            else:
+                clicks = reliability - 7 
+                button = divs_rating[2].find_elements(By.TAG_NAME,"button")[1]
+                for i in range(clicks):
+                    button.click()
+
+        courtesy = int(self.courtesy)
+        if courtesy != 7 :
+            if courtesy < 7 :
+                clicks = 7 - courtesy
+                button = divs_rating[3].find_elements(By.TAG_NAME,"button")[0]
+                for i in range(clicks):
+                    button.click()
+            else:
+                clicks = courtesy - 7 
+                button = divs_rating[3].find_elements(By.TAG_NAME,"button")[1]
+                for i in range(clicks):
+                    button.click()
 
         btn_next = self.driver.find_element(By.CSS_SELECTOR,"button[type='submit']")
         btn_next.click()
