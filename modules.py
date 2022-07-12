@@ -31,7 +31,11 @@ class Review(Base):
     post_code = Column(Text(655365))
     phone_number = Column(Text(655365))
     published = Column(Boolean(),default=False)
-
+    quality = Column(Text(655365))
+    tidiness = Column(Text(655365))
+    reliability = Column(Text(655365))
+    courtesy = Column(Text(655365))
+    business = Column(Text(655365))
     def serialize(self):
         d = Serializer.serialize(self)
         return d

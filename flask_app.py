@@ -22,6 +22,12 @@ def share():
     review.job = request.form['job']
     review.post_code = request.form['post-code']
     review.phone_number = request.form['phone-number']
+    review.business = request.form['business']
+    review.quality = request.form['quality']
+    review.reliability = request.form['reliability']
+    review.courtesy = request.form['courtesy']
+    review.tidiness = request.form['tidiness']
+
     id = add_review(review)
     return render_template('share_review.html',id=id)
 

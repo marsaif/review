@@ -8,16 +8,7 @@ from selenium.webdriver.chrome.service import Service
 
 
 class Scraper :
-    def __init__(self,email,review_title,service,job,post_code,tlf,review , first_name , last_name) -> None:
-        self.first_name = first_name
-        self.last_name = last_name
-        self.review = review
-        self.email = email
-        self.review_title = review_title
-        self.service = service
-        self.job = job
-        self.post_code = post_code
-        self.tlf = tlf
+    def __init__(self) -> None:
         options = webdriver.ChromeOptions()
         options.add_argument("--window-size=1920,1080")
         #options.add_argument("--headless")
@@ -41,8 +32,9 @@ class Scraper :
         div_start = self.driver.find_element_by_class_name("writeReview--rating")
         div_start.click()
 
-        stars = self.driver.find_element(By.CSS_SELECTOR,"label[for='rating-input-1-5']")
+        stars = self.driver.find_element(By.CSS_SELECTOR,f"label[for='rating-input-1-{self.business}']")
         stars.click()
+        sleep(100)
 
         input_review = self.driver.find_element(By.ID,"review_body")
         input_review.send_keys(self.review)
@@ -65,7 +57,6 @@ class Scraper :
 
         btn_submit = self.driver.find_element(By.CSS_SELECTOR,"button[data-tracking='REVIEWS:GUEST:CONTINUE:SUBMIT']")
        # btn_submit.click()
-        print("good1")
 
         sleep(3)
 
@@ -98,7 +89,6 @@ class Scraper :
         btn_next = self.driver.find_element(By.CSS_SELECTOR,"button[type='submit']")
         btn_next.click()
         sleep(1)
-
 
         divs_rating = self.wait.until(EC.visibility_of_all_elements_located((By.CLASS_NAME,"fpntma")))
         for div in divs_rating :
@@ -143,7 +133,9 @@ class Scraper :
 
         button_submit = self.driver.find_element(By.CSS_SELECTOR,"button[type='submit']")
        # button_submit.click()
-        print("good2")
+    
+    def close_browser(self):
+        self.driver.quit()
 
 
 
